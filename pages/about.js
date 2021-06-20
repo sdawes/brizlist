@@ -5,8 +5,7 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   return (
     <div className={styles.container}>
-      <h1>brizlist.com</h1>
-      <p>This site has been developed in next.js and deployed to AWS using AWS Amplify</p>
+      <h1>about page</h1>
     </div>
   )
 }
