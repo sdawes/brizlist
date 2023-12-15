@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct VenueView: View {
+    @ObservedObject private var viewModel = VenueViewModel()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(viewModel.venues) { venue in
+            VStack(alignment: .leading) {
+                Text(venue.name).font(.headline)
+                Text(venue.type).font(.subheadline)
+            }
+        }.onAppear() {
+            self.viewModel.fetchData()
+        }
     }
 }
 
-#Preview {
-    VenueView()
+
+struct VenueView_Previews: PreviewProvider {
+    static var previews: some View {
+        VenueView()
+    }
 }
+
