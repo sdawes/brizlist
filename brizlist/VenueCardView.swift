@@ -9,16 +9,32 @@ import SwiftUI
 
 struct VenueCardView: View {
     var venue: Venue
+    @State private var isExpanded: Bool = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text(venue.name).font(.headline)
             Text(venue.type).font(.subheadline)
+
+            if isExpanded {
+                // Load and display the image from the URL
+                AsyncImage(url: URL(string: venue.url)) { image in
+                    image.resizable()
+                } placeholder: {
+                    Color.gray
+                }
+                .aspectRatio(contentMode: .fit)
+                .frame(maxWidth: .infinity)
+            }
         }
         .padding()
         .background(Color.white)
         .cornerRadius(10)
-        .shadow(radius: 5)
+        .onTapGesture {
+            withAnimation {
+                isExpanded.toggle()
+            }
+        }
     }
 }
 
