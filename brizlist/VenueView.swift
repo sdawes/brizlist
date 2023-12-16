@@ -27,7 +27,13 @@ struct VenueView: View {
 
 struct VenueView_Previews: PreviewProvider {
     static var previews: some View {
-        VenueView()
+        ZStack {
+            Color.gray.opacity(0.1) // Replace with your desired color
+                .edgesIgnoringSafeArea(.all) // Ensures the color extends to the preview's edges
+
+            VenueView()
+        }
+        .previewLayout(.sizeThatFits) // Adjusts the preview layout
     }
 }
 

@@ -13,14 +13,26 @@ struct VenueCardView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(venue.name)
-                .font(.headline)
-                .frame(maxWidth: .infinity, alignment: .leading) // Aligns text to the left
+            HStack {
+                // VStack for Texts
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(venue.name).font(.headline)
+                    Text(venue.type).font(.subheadline)
+                    Text(venue.location).font(.subheadline)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
 
-            Text(venue.type)
-                .font(.subheadline)
-                .frame(maxWidth: .infinity, alignment: .leading) // Aligns text to the left
+                // Image
+                AsyncImage(url: URL(string: venue.url)) { image in
+                    image.resizable()
+                } placeholder: {
+                    Color.gray
+                }
+                .frame(width: 50, height: 50) // Adjust size as needed
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+            }
 
+            // Expandable part
             if isExpanded {
                 AsyncImage(url: URL(string: venue.url)) { image in
                     image.resizable()
