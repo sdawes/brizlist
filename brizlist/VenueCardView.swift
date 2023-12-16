@@ -25,7 +25,7 @@ struct VenueCardView: View {
                             Text(venue.location).font(.caption).foregroundColor(Color.darkRed)
                         }
                         HStack(spacing: 2) {
-                            Image(systemName: "house.fill")
+                            Image(systemName: iconForVenueType(venue.type))
                                 .foregroundColor(.gray)
                                 .imageScale(.small)
                             Text(venue.type).font(.caption).foregroundColor(Color.gray)
@@ -34,7 +34,7 @@ struct VenueCardView: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
 
-                // Image
+                // Image icon
                 AsyncImage(url: URL(string: venue.url)) { image in
                     image.resizable()
                 } placeholder: {
