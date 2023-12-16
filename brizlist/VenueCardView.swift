@@ -20,9 +20,9 @@ struct VenueCardView: View {
                     HStack {
                         HStack(spacing: 2) {
                             Image(systemName: "location.circle.fill")
-                                .foregroundColor(.darkRed)
+                                .foregroundColor(.gray)
                                 .imageScale(.small)
-                            Text(venue.location).font(.caption).foregroundColor(Color.darkRed)
+                            Text(venue.location).font(.caption).foregroundColor(Color.gray)
                         }
                         HStack(spacing: 2) {
                             Image(systemName: iconForVenueType(venue.type))
@@ -59,6 +59,8 @@ struct VenueCardView: View {
         .padding()
         .frame(maxWidth: .infinity)
         .background(Color.white)
+        .cornerRadius(10)
+        .padding(.horizontal, 10) // Additional padding to reduce card width
         .onTapGesture {
             withAnimation {
                 isExpanded.toggle()
