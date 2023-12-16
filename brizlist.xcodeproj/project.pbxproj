@@ -16,6 +16,8 @@
 		1F44F0B02B2CEF9D0030E67F /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44F0AF2B2CEF9D0030E67F /* Venue.swift */; };
 		1F44F0B22B2CEFD80030E67F /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44F0B12B2CEFD80030E67F /* VenueViewModel.swift */; };
 		1F44F0B42B2CF0060030E67F /* VenueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44F0B32B2CF0060030E67F /* VenueView.swift */; };
+		1F44F0B62B2DBFC30030E67F /* VenueCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44F0B52B2DBFC30030E67F /* VenueCardView.swift */; };
+		1F44F0B82B2DC0810030E67F /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44F0B72B2DC0810030E67F /* MockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		1F44F0AF2B2CEF9D0030E67F /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		1F44F0B12B2CEFD80030E67F /* VenueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewModel.swift; sourceTree = "<group>"; };
 		1F44F0B32B2CF0060030E67F /* VenueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueView.swift; sourceTree = "<group>"; };
+		1F44F0B52B2DBFC30030E67F /* VenueCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCardView.swift; sourceTree = "<group>"; };
+		1F44F0B72B2DC0810030E67F /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				1F44F0AF2B2CEF9D0030E67F /* Venue.swift */,
 				1F44F0B12B2CEFD80030E67F /* VenueViewModel.swift */,
 				1F44F0B32B2CF0060030E67F /* VenueView.swift */,
+				1F44F0B52B2DBFC30030E67F /* VenueCardView.swift */,
+				1F44F0B72B2DC0810030E67F /* MockData.swift */,
 			);
 			path = brizlist;
 			sourceTree = "<group>";
@@ -158,10 +164,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F44F0B62B2DBFC30030E67F /* VenueCardView.swift in Sources */,
 				1F44F09B2B2CE5950030E67F /* ContentView.swift in Sources */,
 				1F44F0B42B2CF0060030E67F /* VenueView.swift in Sources */,
 				1F44F0B02B2CEF9D0030E67F /* Venue.swift in Sources */,
 				1F44F0B22B2CEFD80030E67F /* VenueViewModel.swift in Sources */,
+				1F44F0B82B2DC0810030E67F /* MockData.swift in Sources */,
 				1F44F0992B2CE5950030E67F /* brizlistApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

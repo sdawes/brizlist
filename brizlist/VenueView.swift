@@ -12,11 +12,9 @@ struct VenueView: View {
 
     var body: some View {
         List(viewModel.venues) { venue in
-            VStack(alignment: .leading) {
-                Text(venue.name).font(.headline)
-                Text(venue.type).font(.subheadline)
-            }
-        }.onAppear() {
+            VenueCardView(venue: venue)
+        }
+        .onAppear() {
             self.viewModel.fetchData()
         }
     }
