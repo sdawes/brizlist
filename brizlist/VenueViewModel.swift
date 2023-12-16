@@ -27,7 +27,8 @@ class VenueViewModel: ObservableObject {
                 let type = data["type"] as? String ?? ""
                 let url = data["url"] as? String ?? ""
                 let location = data["location"] as? String ?? ""
-                return Venue(id: document.documentID, name: name, type: type, url: url, location: location)
+                let shortDescription = data["shortDescription"] as? String ?? ""
+                return Venue(id: document.documentID, name: name, type: type, url: url, location: location, shortDescription: shortDescription)
             }
         }
     }

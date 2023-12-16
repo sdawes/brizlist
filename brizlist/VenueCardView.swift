@@ -16,7 +16,8 @@ struct VenueCardView: View {
             HStack {
                 // VStack for Info
                 VStack(alignment: .leading, spacing: 5) {
-                    Text(venue.name).font(.body)
+                    Text(venue.name).font(.body).padding(.bottom, 5)
+                    Text(venue.shortDescription).font(.caption2).fontWeight(.light).foregroundColor(Color.gray).italic().padding(.bottom, 5)
                     HStack {
                         HStack(spacing: 2) {
                             Image(systemName: "location.circle.fill")
@@ -54,6 +55,7 @@ struct VenueCardView: View {
                 }
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity)
+                .cornerRadius(10)
             }
         }
         .padding()
