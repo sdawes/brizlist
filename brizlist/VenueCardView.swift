@@ -14,11 +14,23 @@ struct VenueCardView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
-                // VStack for Texts
+                // VStack for Info
                 VStack(alignment: .leading, spacing: 5) {
-                    Text(venue.name).font(.headline)
-                    Text(venue.type).font(.subheadline)
-                    Text(venue.location).font(.subheadline)
+                    Text(venue.name).font(.body)
+                    HStack {
+                        HStack(spacing: 2) {
+                            Image(systemName: "location.circle.fill")
+                                .foregroundColor(.darkRed)
+                                .imageScale(.small)
+                            Text(venue.location).font(.caption).foregroundColor(Color.darkRed)
+                        }
+                        HStack(spacing: 2) {
+                            Image(systemName: "house.fill")
+                                .foregroundColor(.gray)
+                                .imageScale(.small)
+                            Text(venue.type).font(.caption).foregroundColor(Color.gray)
+                        }
+                    }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
 
@@ -28,10 +40,11 @@ struct VenueCardView: View {
                 } placeholder: {
                     Color.gray
                 }
-                .frame(width: 50, height: 50) // Adjust size as needed
+                .frame(width: 60, height: 60) // Adjust size as needed
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             }
 
+            
             // Expandable part
             if isExpanded {
                 AsyncImage(url: URL(string: venue.url)) { image in
