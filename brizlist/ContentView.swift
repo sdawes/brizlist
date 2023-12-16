@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VenueView()
+        ZStack {
+            Color.gray.opacity(0.2)
+            VenueView()
+        }
     }
 }
 
