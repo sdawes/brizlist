@@ -11,8 +11,12 @@ struct VenueView: View {
     @ObservedObject private var viewModel = VenueViewModel()
 
     var body: some View {
-        List(viewModel.venues) { venue in
-            VenueCardView(venue: venue)
+        ScrollView {
+            LazyVStack(spacing: 10) {
+                ForEach(viewModel.venues) { venue in
+                    VenueCardView(venue: venue)
+                }
+            }
         }
         .onAppear() {
             self.viewModel.fetchData()
