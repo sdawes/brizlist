@@ -13,11 +13,15 @@ struct VenueCardView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(venue.name).font(.headline)
-            Text(venue.type).font(.subheadline)
+            Text(venue.name)
+                .font(.headline)
+                .frame(maxWidth: .infinity, alignment: .leading) // Aligns text to the left
+
+            Text(venue.type)
+                .font(.subheadline)
+                .frame(maxWidth: .infinity, alignment: .leading) // Aligns text to the left
 
             if isExpanded {
-                // Load and display the image from the URL
                 AsyncImage(url: URL(string: venue.url)) { image in
                     image.resizable()
                 } placeholder: {
@@ -28,8 +32,8 @@ struct VenueCardView: View {
             }
         }
         .padding()
+        .frame(maxWidth: .infinity)
         .background(Color.white)
-        .cornerRadius(10)
         .onTapGesture {
             withAnimation {
                 isExpanded.toggle()
