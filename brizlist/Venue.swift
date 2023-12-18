@@ -15,8 +15,9 @@ struct Venue: Identifiable {
     var location: String
     var shortDescription: String
     var newEntry: Bool
+    var featuredVenue: Bool
 
-    init(id: String, name: String, type: String, url: String, location: String, shortDescription: String, newEntry: Bool) {
+    init(id: String, name: String, type: String, url: String, location: String, shortDescription: String, newEntry: Bool, featuredVenue: Bool) {
         self.id = id
         self.name = name
         self.type = type
@@ -24,5 +25,6 @@ struct Venue: Identifiable {
         self.location = location
         self.shortDescription = shortDescription
         self.newEntry = newEntry
+        self.featuredVenue = featuredVenue
     }
 }
