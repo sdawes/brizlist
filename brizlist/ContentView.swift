@@ -9,18 +9,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var viewModel = VenueModel()
+    @StateObject var viewModel = VenueViewModel() // Using VenueViewModel
 
     var body: some View {
         ZStack {
             Color.greenGray
                 .edgesIgnoringSafeArea(.all)
-            VenueListView(viewModel: viewModel) // Pass the existing ViewModel instance
+            VenueListView(viewModel: viewModel) // Passing the VenueViewModel instance
         }
         .onAppear {
-            viewModel.fetchData()
-            print("ContentView appeared")
+            print("See Steve, this is the Content View file working")
         }
+        
     }
 }
 
@@ -29,3 +29,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+

@@ -1,5 +1,5 @@
 //
-//  VenueModel.swift
+//  VenueViewModel.swift
 //  brizlist
 //
 //  Created by Stephen Dawes on 15/12/2023.
@@ -11,10 +11,12 @@ import FirebaseFirestore
 
 class VenueViewModel: ObservableObject {
     @Published var venues = [Venue]()
-
     private var db = Firestore.firestore()
 
-    // New method for data retrieval
+    init() {
+        fetchData() // Fetch data when the model is initialized
+    }
+
     func fetchData() {
         db.collection("venues").addSnapshotListener { querySnapshot, error in
             guard let documents = querySnapshot?.documents else {
@@ -31,7 +33,6 @@ class VenueViewModel: ObservableObject {
                 let shortDescription = data["shortDescription"] as? String ?? ""
                 return Venue(id: document.documentID, name: name, type: type, url: url, location: location, shortDescription: shortDescription)
             }
-//            print("Fetched venues: \(self.venues)")
         }
     }
 }

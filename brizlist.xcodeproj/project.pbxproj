@@ -14,8 +14,8 @@
 		1F44F0A02B2CE5960030E67F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F44F09F2B2CE5960030E67F /* Preview Assets.xcassets */; };
 		1F44F0A72B2CE87D0030E67F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F44F0A62B2CE87C0030E67F /* GoogleService-Info.plist */; };
 		1F44F0AA2B2CE9F30030E67F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1F44F0A92B2CE9F30030E67F /* FirebaseFirestore */; };
-		1F44F0B02B2CEF9D0030E67F /* VenueDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44F0AF2B2CEF9D0030E67F /* VenueDataModel.swift */; };
-		1F44F0B22B2CEFD80030E67F /* VenueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44F0B12B2CEFD80030E67F /* VenueModel.swift */; };
+		1F44F0B02B2CEF9D0030E67F /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44F0AF2B2CEF9D0030E67F /* Venue.swift */; };
+		1F44F0B22B2CEFD80030E67F /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44F0B12B2CEFD80030E67F /* VenueViewModel.swift */; };
 		1F44F0B42B2CF0060030E67F /* VenueListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44F0B32B2CF0060030E67F /* VenueListView.swift */; };
 		1F44F0B62B2DBFC30030E67F /* VenueCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44F0B52B2DBFC30030E67F /* VenueCardView.swift */; };
 		1F44F0B82B2DC0810030E67F /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44F0B72B2DC0810030E67F /* MockData.swift */; };
@@ -29,8 +29,8 @@
 		1F44F09C2B2CE5960030E67F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F44F09F2B2CE5960030E67F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1F44F0A62B2CE87C0030E67F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		1F44F0AF2B2CEF9D0030E67F /* VenueDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDataModel.swift; sourceTree = "<group>"; };
-		1F44F0B12B2CEFD80030E67F /* VenueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueModel.swift; sourceTree = "<group>"; };
+		1F44F0AF2B2CEF9D0030E67F /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		1F44F0B12B2CEFD80030E67F /* VenueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewModel.swift; sourceTree = "<group>"; };
 		1F44F0B32B2CF0060030E67F /* VenueListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListView.swift; sourceTree = "<group>"; };
 		1F44F0B52B2DBFC30030E67F /* VenueCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCardView.swift; sourceTree = "<group>"; };
 		1F44F0B72B2DC0810030E67F /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
@@ -72,8 +72,8 @@
 				1F44F09C2B2CE5960030E67F /* Assets.xcassets */,
 				1F44F0A62B2CE87C0030E67F /* GoogleService-Info.plist */,
 				1F44F09E2B2CE5960030E67F /* Preview Content */,
-				1F44F0AF2B2CEF9D0030E67F /* VenueDataModel.swift */,
-				1F44F0B12B2CEFD80030E67F /* VenueModel.swift */,
+				1F44F0AF2B2CEF9D0030E67F /* Venue.swift */,
+				1F44F0B12B2CEFD80030E67F /* VenueViewModel.swift */,
 				1F44F0B32B2CF0060030E67F /* VenueListView.swift */,
 				1F44F0B52B2DBFC30030E67F /* VenueCardView.swift */,
 				1F44F0B72B2DC0810030E67F /* MockData.swift */,
@@ -171,8 +171,8 @@
 				1F44F09B2B2CE5950030E67F /* ContentView.swift in Sources */,
 				1F44F0B42B2CF0060030E67F /* VenueListView.swift in Sources */,
 				1F000BF82B2DED71003EE3D8 /* VenueFunctions.swift in Sources */,
-				1F44F0B02B2CEF9D0030E67F /* VenueDataModel.swift in Sources */,
-				1F44F0B22B2CEFD80030E67F /* VenueModel.swift in Sources */,
+				1F44F0B02B2CEF9D0030E67F /* Venue.swift in Sources */,
+				1F44F0B22B2CEFD80030E67F /* VenueViewModel.swift in Sources */,
 				1F44F0B82B2DC0810030E67F /* MockData.swift in Sources */,
 				1F44F0992B2CE5950030E67F /* brizlistApp.swift in Sources */,
 			);

@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct VenueListView: View {
-    @ObservedObject var viewModel: VenueModel
-    
-    init(viewModel: VenueModel) {
-        self.viewModel = viewModel
-    }
+    @ObservedObject var viewModel: VenueViewModel // Updated to VenueViewModel
 
     var body: some View {
         ScrollView {
@@ -22,22 +18,17 @@ struct VenueListView: View {
                 }
             }
         }
-        .onAppear() {
-            self.viewModel.fetchData()
-        }
     }
 }
-
 
 struct VenueListView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.greenGray
                 .edgesIgnoringSafeArea(.all)
-
-            VenueListView(viewModel: VenueModel()) // Pass the existing ViewModel instance
+            VenueListView(viewModel: VenueViewModel()) // Updated to VenueViewModel
         }
-        .previewLayout(.sizeThatFits) // Adjusts the preview layout
+        .previewLayout(.sizeThatFits)
     }
 }
 
