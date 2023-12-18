@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct VenueView: View {
+struct VenueListView: View {
     @ObservedObject private var viewModel = VenueViewModel()
 
     var body: some View {
@@ -25,13 +25,13 @@ struct VenueView: View {
 }
 
 
-struct VenueView_Previews: PreviewProvider {
+struct VenueListView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.gray.opacity(0.1) // Replace with your desired color
                 .edgesIgnoringSafeArea(.all) // Ensures the color extends to the preview's edges
 
-            VenueView()
+            VenueListView()
         }
         .previewLayout(.sizeThatFits) // Adjusts the preview layout
     }

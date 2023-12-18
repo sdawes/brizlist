@@ -12,7 +12,7 @@ struct ContentView: View {
         ZStack {
             Color.greenGray
                 .edgesIgnoringSafeArea(.all)
-            VenueView()
+            VenueListView()
         }
     }
 }

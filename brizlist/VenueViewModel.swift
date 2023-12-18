@@ -11,6 +11,7 @@ import FirebaseFirestore
 
 class VenueViewModel: ObservableObject {
     @Published var venues = [Venue]()
+    @Published var venueOfTheWeek: Venue?
 
     private var db = Firestore.firestore()
 
@@ -33,4 +34,11 @@ class VenueViewModel: ObservableObject {
             }
         }
     }
+    
+    func identifyVenueOfTheWeek() {
+        venueOfTheWeek = venues.first(where: { $0.venueOfTheWeek })
+    }
 }
+
+
+
