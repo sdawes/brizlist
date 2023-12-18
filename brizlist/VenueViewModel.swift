@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 import FirebaseFirestore
 
-class VenueModel: ObservableObject {
+class VenueViewModel: ObservableObject {
     @Published var venues = [Venue]()
 
     private var db = Firestore.firestore()
@@ -31,7 +31,7 @@ class VenueModel: ObservableObject {
                 let shortDescription = data["shortDescription"] as? String ?? ""
                 return Venue(id: document.documentID, name: name, type: type, url: url, location: location, shortDescription: shortDescription)
             }
-            print("Fetched venues: \(self.venues)")
+//            print("Fetched venues: \(self.venues)")
         }
     }
 }
