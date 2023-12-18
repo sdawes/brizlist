@@ -16,20 +16,30 @@ struct VenueCardView: View {
             HStack {
                 // VStack for Info
                 VStack(alignment: .leading, spacing: 5) {
-                    Text(venue.name).font(.body).padding(.bottom, 5)
-                    Text(venue.shortDescription).font(.caption2).fontWeight(.light).foregroundColor(Color.gray).italic().padding(.bottom, 5)
+                    Text(venue.name)
+                        .font(.custom("UbuntuMono-Regular", size: 18))
+                        .padding(.bottom, 5)
+                    Text(venue.shortDescription)
+                        .font(.custom("Roboto-Regular", size: 12))
+                        .foregroundColor(Color.gray)
+                        .italic()
+                        .padding(.bottom, 5)
                     HStack {
                         HStack(spacing: 2) {
                             Image(systemName: "location.circle.fill")
                                 .foregroundColor(.gray)
                                 .imageScale(.small)
-                            Text(venue.location).font(.caption).foregroundColor(Color.gray)
+                            Text(venue.location)
+                                .font(.custom("Roboto-Regular", size: 12))
+                                .foregroundColor(Color.gray)
                         }
                         HStack(spacing: 2) {
                             Image(systemName: iconForVenueType(venue.type))
                                 .foregroundColor(.gray)
                                 .imageScale(.small)
-                            Text(venue.type).font(.caption).foregroundColor(Color.gray)
+                            Text(venue.type)
+                                .font(.custom("Roboto-Regular", size: 12))
+                                .foregroundColor(Color.gray)
                         }
                     }
                 }
@@ -42,7 +52,6 @@ struct VenueCardView: View {
                     Color.gray
                 }
                 .frame(width: 60, height: 60) // Adjust size as needed
-                .clipShape(RoundedRectangle(cornerRadius: 10))
             }
 
             
@@ -55,13 +64,11 @@ struct VenueCardView: View {
                 }
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity)
-                .cornerRadius(10)
             }
         }
         .padding()
         .frame(maxWidth: .infinity)
         .background(Color.white)
-        .cornerRadius(10)
         .padding(.horizontal, 10) // Additional padding to reduce card width
         .onTapGesture {
             withAnimation {

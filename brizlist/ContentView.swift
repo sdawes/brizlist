@@ -12,6 +12,7 @@ struct ContentView: View {
     @StateObject var viewModel = VenueViewModel() // Using VenueViewModel
 
     var body: some View {
+
         ZStack {
             Color.greenGray
                 .edgesIgnoringSafeArea(.all)

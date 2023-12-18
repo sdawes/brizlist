@@ -19,6 +19,19 @@
 		1F44F0B42B2CF0060030E67F /* VenueListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44F0B32B2CF0060030E67F /* VenueListView.swift */; };
 		1F44F0B62B2DBFC30030E67F /* VenueCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44F0B52B2DBFC30030E67F /* VenueCardView.swift */; };
 		1F44F0B82B2DC0810030E67F /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44F0B72B2DC0810030E67F /* MockData.swift */; };
+		1F6A76462B30993A003BE015 /* UbuntuMono-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F6A76422B30993A003BE015 /* UbuntuMono-BoldItalic.ttf */; };
+		1F6A76472B30993A003BE015 /* UbuntuMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F6A76432B30993A003BE015 /* UbuntuMono-Bold.ttf */; };
+		1F6A76482B30993A003BE015 /* UbuntuMono-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F6A76442B30993A003BE015 /* UbuntuMono-Italic.ttf */; };
+		1F6A76492B30993A003BE015 /* UbuntuMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F6A76452B30993A003BE015 /* UbuntuMono-Regular.ttf */; };
+		1FCCA0822B30A47E00E8C461 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FCCA0792B30A47E00E8C461 /* Roboto-Thin.ttf */; };
+		1FCCA0832B30A47E00E8C461 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FCCA07A2B30A47E00E8C461 /* Roboto-LightItalic.ttf */; };
+		1FCCA0842B30A47E00E8C461 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FCCA07B2B30A47E00E8C461 /* Roboto-Medium.ttf */; };
+		1FCCA0852B30A47E00E8C461 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FCCA07C2B30A47E00E8C461 /* Roboto-Bold.ttf */; };
+		1FCCA0862B30A47E00E8C461 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FCCA07D2B30A47E00E8C461 /* Roboto-BoldItalic.ttf */; };
+		1FCCA0872B30A47E00E8C461 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FCCA07E2B30A47E00E8C461 /* Roboto-Light.ttf */; };
+		1FCCA0882B30A47E00E8C461 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FCCA07F2B30A47E00E8C461 /* Roboto-Italic.ttf */; };
+		1FCCA0892B30A47E00E8C461 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FCCA0802B30A47E00E8C461 /* Roboto-MediumItalic.ttf */; };
+		1FCCA08A2B30A47E00E8C461 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FCCA0812B30A47E00E8C461 /* Roboto-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +47,20 @@
 		1F44F0B32B2CF0060030E67F /* VenueListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListView.swift; sourceTree = "<group>"; };
 		1F44F0B52B2DBFC30030E67F /* VenueCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCardView.swift; sourceTree = "<group>"; };
 		1F44F0B72B2DC0810030E67F /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		1F6A76422B30993A003BE015 /* UbuntuMono-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UbuntuMono-BoldItalic.ttf"; sourceTree = "<group>"; };
+		1F6A76432B30993A003BE015 /* UbuntuMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UbuntuMono-Bold.ttf"; sourceTree = "<group>"; };
+		1F6A76442B30993A003BE015 /* UbuntuMono-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UbuntuMono-Italic.ttf"; sourceTree = "<group>"; };
+		1F6A76452B30993A003BE015 /* UbuntuMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UbuntuMono-Regular.ttf"; sourceTree = "<group>"; };
+		1FCCA0782B309F0200E8C461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1FCCA0792B30A47E00E8C461 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		1FCCA07A2B30A47E00E8C461 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		1FCCA07B2B30A47E00E8C461 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		1FCCA07C2B30A47E00E8C461 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		1FCCA07D2B30A47E00E8C461 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		1FCCA07E2B30A47E00E8C461 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		1FCCA07F2B30A47E00E8C461 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		1FCCA0802B30A47E00E8C461 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		1FCCA0812B30A47E00E8C461 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +94,8 @@
 		1F44F0972B2CE5950030E67F /* brizlist */ = {
 			isa = PBXGroup;
 			children = (
+				1FCCA0782B309F0200E8C461 /* Info.plist */,
+				1F6A76412B309915003BE015 /* Fonts */,
 				1F44F0982B2CE5950030E67F /* brizlistApp.swift */,
 				1F44F09A2B2CE5950030E67F /* ContentView.swift */,
 				1F44F09C2B2CE5960030E67F /* Assets.xcassets */,
@@ -88,6 +117,26 @@
 				1F44F09F2B2CE5960030E67F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1F6A76412B309915003BE015 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1FCCA07C2B30A47E00E8C461 /* Roboto-Bold.ttf */,
+				1FCCA07D2B30A47E00E8C461 /* Roboto-BoldItalic.ttf */,
+				1FCCA07F2B30A47E00E8C461 /* Roboto-Italic.ttf */,
+				1FCCA07E2B30A47E00E8C461 /* Roboto-Light.ttf */,
+				1FCCA07A2B30A47E00E8C461 /* Roboto-LightItalic.ttf */,
+				1FCCA07B2B30A47E00E8C461 /* Roboto-Medium.ttf */,
+				1FCCA0802B30A47E00E8C461 /* Roboto-MediumItalic.ttf */,
+				1FCCA0812B30A47E00E8C461 /* Roboto-Regular.ttf */,
+				1FCCA0792B30A47E00E8C461 /* Roboto-Thin.ttf */,
+				1F6A76432B30993A003BE015 /* UbuntuMono-Bold.ttf */,
+				1F6A76422B30993A003BE015 /* UbuntuMono-BoldItalic.ttf */,
+				1F6A76442B30993A003BE015 /* UbuntuMono-Italic.ttf */,
+				1F6A76452B30993A003BE015 /* UbuntuMono-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,7 +203,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FCCA0842B30A47E00E8C461 /* Roboto-Medium.ttf in Resources */,
+				1FCCA0892B30A47E00E8C461 /* Roboto-MediumItalic.ttf in Resources */,
+				1FCCA08A2B30A47E00E8C461 /* Roboto-Regular.ttf in Resources */,
+				1FCCA0822B30A47E00E8C461 /* Roboto-Thin.ttf in Resources */,
+				1F6A76482B30993A003BE015 /* UbuntuMono-Italic.ttf in Resources */,
+				1F6A76492B30993A003BE015 /* UbuntuMono-Regular.ttf in Resources */,
+				1FCCA0852B30A47E00E8C461 /* Roboto-Bold.ttf in Resources */,
 				1F44F0A02B2CE5960030E67F /* Preview Assets.xcassets in Resources */,
+				1FCCA0862B30A47E00E8C461 /* Roboto-BoldItalic.ttf in Resources */,
+				1F6A76462B30993A003BE015 /* UbuntuMono-BoldItalic.ttf in Resources */,
+				1FCCA0832B30A47E00E8C461 /* Roboto-LightItalic.ttf in Resources */,
+				1FCCA0872B30A47E00E8C461 /* Roboto-Light.ttf in Resources */,
+				1F6A76472B30993A003BE015 /* UbuntuMono-Bold.ttf in Resources */,
+				1FCCA0882B30A47E00E8C461 /* Roboto-Italic.ttf in Resources */,
 				1F44F09D2B2CE5960030E67F /* Assets.xcassets in Resources */,
 				1F44F0A72B2CE87D0030E67F /* GoogleService-Info.plist in Resources */,
 			);
@@ -310,6 +372,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"brizlist/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = brizlist/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -338,6 +401,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"brizlist/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = brizlist/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
