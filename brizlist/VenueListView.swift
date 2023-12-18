@@ -1,5 +1,5 @@
 //
-//  VenueView.swift
+//  VenueListView.swift
 //  brizlist
 //
 //  Created by Stephen Dawes on 15/12/2023.
@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct VenueListView: View {
-    @ObservedObject private var viewModel = VenueViewModel()
+    @ObservedObject var viewModel: VenueModel
+    
+    init(viewModel: VenueModel) {
+        self.viewModel = viewModel
+    }
 
     var body: some View {
         ScrollView {
@@ -28,12 +32,14 @@ struct VenueListView: View {
 struct VenueListView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            Color.gray.opacity(0.1) // Replace with your desired color
-                .edgesIgnoringSafeArea(.all) // Ensures the color extends to the preview's edges
+            Color.greenGray
+                .edgesIgnoringSafeArea(.all)
 
-            VenueListView()
+            VenueListView(viewModel: VenueModel()) // Pass the existing ViewModel instance
         }
         .previewLayout(.sizeThatFits) // Adjusts the preview layout
     }
 }
+
+
 
