@@ -14,13 +14,15 @@ struct Venue: Identifiable {
     var url: String
     var location: String
     var shortDescription: String
+    var newEntry: Bool
 
-    init(id: String, name: String, type: String, url: String, location: String, shortDescription: String) {
+    init(id: String, name: String, type: String, url: String, location: String, shortDescription: String, newEntry: Bool) {
         self.id = id
         self.name = name
         self.type = type
         self.url = url
         self.location = location
         self.shortDescription = shortDescription
+        self.newEntry = newEntry
     }
 }

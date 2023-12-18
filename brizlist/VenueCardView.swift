@@ -10,7 +10,7 @@ import SwiftUI
 struct VenueCardView: View {
     var venue: Venue
     @State private var isExpanded: Bool = false
-
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
@@ -19,6 +19,17 @@ struct VenueCardView: View {
                     Text(venue.name)
                         .font(.custom("UbuntuMono-Regular", size: 18))
                         .padding(.bottom, 5)
+                    
+                    if venue.newEntry {
+                        Text("new")
+                            .font(.custom("UbuntuMono-Regular", size: 12))
+                            .foregroundColor(.red)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 2)
+                            .background(Color.yellow)
+                            .cornerRadius(4)
+                    }
+                    
                     Text(venue.shortDescription)
                         .font(.custom("Roboto-Regular", size: 12))
                         .foregroundColor(Color.gray)
@@ -44,7 +55,7 @@ struct VenueCardView: View {
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-
+                
                 // Image icon
                 AsyncImage(url: URL(string: venue.url)) { image in
                     image.resizable()
@@ -53,7 +64,7 @@ struct VenueCardView: View {
                 }
                 .frame(width: 60, height: 60) // Adjust size as needed
             }
-
+            
             
             // Expandable part
             if isExpanded {
