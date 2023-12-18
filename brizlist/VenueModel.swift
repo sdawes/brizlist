@@ -9,12 +9,12 @@ import Foundation
 import Firebase
 import FirebaseFirestore
 
-class VenueViewModel: ObservableObject {
+class VenueModel: ObservableObject {
     @Published var venues = [Venue]()
-    @Published var venueOfTheWeek: Venue?
 
     private var db = Firestore.firestore()
 
+    // New method for data retrieval
     func fetchData() {
         db.collection("venues").addSnapshotListener { querySnapshot, error in
             guard let documents = querySnapshot?.documents else {
@@ -29,14 +29,10 @@ class VenueViewModel: ObservableObject {
                 let url = data["url"] as? String ?? ""
                 let location = data["location"] as? String ?? ""
                 let shortDescription = data["shortDescription"] as? String ?? ""
-                let venueOfTheWeek = data["venueOfTheWeek"] as? Bool ?? false // Default to false if not present
-                return Venue(id: document.documentID, name: name, type: type, url: url, location: location, shortDescription: shortDescription, venueOfTheWeek: venueOfTheWeek)
+                return Venue(id: document.documentID, name: name, type: type, url: url, location: location, shortDescription: shortDescription)
             }
+            print("Fetched venues: \(self.venues)")
         }
-    }
-    
-    func identifyVenueOfTheWeek() {
-        venueOfTheWeek = venues.first(where: { $0.venueOfTheWeek })
     }
 }
 
