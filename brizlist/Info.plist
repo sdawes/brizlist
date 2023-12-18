@@ -5,6 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>UbuntuMono-Regular.ttf</string>
+		<string>UbuntuMono-Bold.ttf</string>
 		<string>Roboto-Regular.ttf</string>
 		<string>Roboto-light.ttf</string>
 	</array>

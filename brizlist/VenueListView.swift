@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct VenueListView: View {
-    @ObservedObject var viewModel: VenueViewModel // Updated to VenueViewModel
+    @ObservedObject var viewModel: VenueViewModel
 
     var body: some View {
         ScrollView {
-            LazyVStack(spacing: 10) {
+            LazyVStack(spacing: 5) {
                 ForEach(viewModel.venues) { venue in
                     VenueCardView(venue: venue)
                 }
@@ -26,7 +26,7 @@ struct VenueListView_Previews: PreviewProvider {
         ZStack {
             Color.greenGray
                 .edgesIgnoringSafeArea(.all)
-            VenueListView(viewModel: VenueViewModel()) // Updated to VenueViewModel
+            VenueListView(viewModel: VenueViewModel())
         }
         .previewLayout(.sizeThatFits)
     }

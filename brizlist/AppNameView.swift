@@ -9,16 +9,29 @@ import SwiftUI
 
 struct AppNameView: View {
     var body: some View {
-        Text("brizlist")
-            .font(.largeTitle) // Customize the font as needed
-            .padding() // Add padding for better layout
-            // Add any other styling you want for the app name
+        HStack {
+            Image(systemName: "star.circle.fill")
+                .foregroundColor(.black)
+                .imageScale(.large)
+                // Reduce or remove the left padding on the image
+                .padding(.leading, 25) // Adjust this value as needed
+
+            Text("brizlist")
+                .font(.custom("UbuntuMono-Bold", size: 22))
+                // Apply padding only to the top, bottom, and trailing edges
+                .padding([.top, .bottom, .trailing])
+
+        }
+        .frame(maxWidth: .infinity, alignment: .leading) // Align text to the left
     }
 }
 
-
-#Preview {
-    AppNameView()
+// Preview
+struct AppNameView_Previews: PreviewProvider {
+    static var previews: some View {
+        AppNameView()
+    }
 }
+
 
 

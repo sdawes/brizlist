@@ -69,7 +69,7 @@ struct VenueCardView: View {
         .padding()
         .frame(maxWidth: .infinity)
         .background(Color.white)
-        .padding(.horizontal, 10) // Additional padding to reduce card width
+        .padding(.horizontal, 20) // Additional padding to reduce card width
         .onTapGesture {
             withAnimation {
                 isExpanded.toggle()
