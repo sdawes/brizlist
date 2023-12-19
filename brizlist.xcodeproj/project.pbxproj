@@ -33,6 +33,7 @@
 		1FCCA0892B30A47E00E8C461 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FCCA0802B30A47E00E8C461 /* Roboto-MediumItalic.ttf */; };
 		1FCCA08A2B30A47E00E8C461 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FCCA0812B30A47E00E8C461 /* Roboto-Regular.ttf */; };
 		1FCCA08C2B30A9DA00E8C461 /* AppNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCA08B2B30A9DA00E8C461 /* AppNameView.swift */; };
+		1FCCA0902B30FECB00E8C461 /* VenueFeaturedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCA08F2B30FECB00E8C461 /* VenueFeaturedCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		1FCCA0802B30A47E00E8C461 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		1FCCA0812B30A47E00E8C461 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		1FCCA08B2B30A9DA00E8C461 /* AppNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNameView.swift; sourceTree = "<group>"; };
+		1FCCA08F2B30FECB00E8C461 /* VenueFeaturedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueFeaturedCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				1F44F0B12B2CEFD80030E67F /* VenueViewModel.swift */,
 				1F44F0B32B2CF0060030E67F /* VenueListView.swift */,
 				1F44F0B52B2DBFC30030E67F /* VenueCardView.swift */,
+				1FCCA08F2B30FECB00E8C461 /* VenueFeaturedCardView.swift */,
 				1F44F0B72B2DC0810030E67F /* MockData.swift */,
 				1F000BF72B2DED71003EE3D8 /* VenueFunctions.swift */,
 			);
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FCCA0902B30FECB00E8C461 /* VenueFeaturedCardView.swift in Sources */,
 				1F44F0B62B2DBFC30030E67F /* VenueCardView.swift in Sources */,
 				1F44F09B2B2CE5950030E67F /* ContentView.swift in Sources */,
 				1F44F0B42B2CF0060030E67F /* VenueListView.swift in Sources */,

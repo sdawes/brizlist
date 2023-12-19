@@ -21,9 +21,12 @@ struct ContentView: View {
                 VenueListView(viewModel: viewModel) // The main list view
             }
         }
-        .onAppear {
-            print("See Steve, this is the Content View file working")
-        }
+        
+        // Testing the console below
+        
+//        .onAppear {
+//            print("See Steve, this is the Content View file working")
+//        }
     }
 }
 
