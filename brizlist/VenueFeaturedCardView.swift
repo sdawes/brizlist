@@ -9,7 +9,6 @@ import SwiftUI
 
 struct VenueFeaturedCardView: View {
     var venue: Venue
-    @State private var isExpanded: Bool = false
     
     // Define the rainbow gradient
     let rainbowGradient = LinearGradient(
@@ -81,18 +80,6 @@ struct VenueFeaturedCardView: View {
                 }
                 .frame(width: 60, height: 60) // Adjust size as needed
             }
-            
-            
-            // Expandable part
-            if isExpanded {
-                AsyncImage(url: URL(string: venue.url)) { image in
-                    image.resizable()
-                } placeholder: {
-                    Color.gray
-                }
-                .aspectRatio(contentMode: .fit)
-                .frame(maxWidth: .infinity)
-            }
         }
         .padding()
         .frame(maxWidth: .infinity)
@@ -102,12 +89,7 @@ struct VenueFeaturedCardView: View {
             RoundedRectangle(cornerRadius: 0)
                 .stroke(rainbowGradient, lineWidth: 2)
         )
-        .padding(.horizontal, 20) // Additional padding to reduce card width
-        .onTapGesture {
-            withAnimation {
-                isExpanded.toggle()
-            }
-        }
+        .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
     }
 }
 

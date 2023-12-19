@@ -9,7 +9,6 @@ import SwiftUI
 
 struct VenueCardView: View {
     var venue: Venue
-    @State private var isExpanded: Bool = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -64,28 +63,11 @@ struct VenueCardView: View {
                 }
                 .frame(width: 60, height: 60) // Adjust size as needed
             }
-            
-            
-            // Expandable part
-            if isExpanded {
-                AsyncImage(url: URL(string: venue.url)) { image in
-                    image.resizable()
-                } placeholder: {
-                    Color.gray
-                }
-                .aspectRatio(contentMode: .fit)
-                .frame(maxWidth: .infinity)
-            }
         }
         .padding()
         .frame(maxWidth: .infinity)
         .background(Color.white)
         .padding(.horizontal, 20) // Additional padding to reduce card width
-        .onTapGesture {
-            withAnimation {
-                isExpanded.toggle()
-            }
-        }
     }
 }
 
