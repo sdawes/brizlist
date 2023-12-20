@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct VenueDetailView: View {
+struct VenueDetailedView: View {
     var venue: Venue
     
     var body: some View {
@@ -15,6 +15,9 @@ struct VenueDetailView: View {
             Text(venue.name)
                 .font(.title)
                 .padding()
+                .onAppear {
+                    print("VenueDetailView loaded with venue: \(venue)")
+                }
             
             Text(venue.shortDescription)
                 .font(.body)
@@ -27,3 +30,9 @@ struct VenueDetailView: View {
     }
 }
 
+// Preview Provider
+struct VenueDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        VenueDetailedView(venue: MockData.venues[0])
+    }
+}
