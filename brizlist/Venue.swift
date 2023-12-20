@@ -5,9 +5,7 @@
 //  Created by Stephen Dawes on 15/12/2023.
 //
 
-import Foundation
-
-struct Venue: Identifiable {
+struct Venue: Identifiable, Hashable {
     var id: String
     var name: String
     var type: String
@@ -16,6 +14,15 @@ struct Venue: Identifiable {
     var shortDescription: String
     var newEntry: Bool
     var featuredVenue: Bool
+
+    // Additional conformance to Hashable
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    static func ==(lhs: Venue, rhs: Venue) -> Bool {
+        lhs.id == rhs.id
+    }
 
     init(id: String, name: String, type: String, url: String, location: String, shortDescription: String, newEntry: Bool, featuredVenue: Bool) {
         self.id = id
@@ -28,3 +35,4 @@ struct Venue: Identifiable {
         self.featuredVenue = featuredVenue
     }
 }
+

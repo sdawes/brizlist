@@ -13,12 +13,12 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            Color.greenGray
+            Color.deepPurple
                 .edgesIgnoringSafeArea(.all)
 
             VStack(spacing: 0) { // VStack to stack the app name and the list
                 AppNameView() // Add the AppNameView at the top
-                VenueListView(viewModel: viewModel) // The main list view
+                VenuesNavigationStackView(viewModel: viewModel) // The main list view
             }
         }
         

@@ -9,31 +9,41 @@ import SwiftUI
 
 struct VenueListView: View {
     @ObservedObject var viewModel: VenueViewModel
-    
+    @State private var navigationPath = NavigationPath() // Add this line
+
     var body: some View {
-        NavigationView {
+        NavigationStack(path: $navigationPath) { // Updated to use NavigationPath
             ScrollView {
                 LazyVStack(spacing: 5) {
-                    // Display the featured venue card at the top if it exists
                     if let featuredVenue = viewModel.venues.first(where: { $0.featuredVenue }) {
                         VenueFeaturedCardView(venue: featuredVenue)
                     }
-                    
-                    // Display the rest of the venues
+
                     ForEach(viewModel.venues) { venue in
                         if !venue.featuredVenue {
-                            NavigationLink(destination: VenueDetailView(venue: venue)) {
+                            // Use a Button to navigate programmatically
+                            Button(action: {
+                                print("Navigating to venue: \(venue)")
+                                navigationPath.append(venue)
+                            }) {
                                 VenueCardView(venue: venue)
                             }
+                            
                         }
                     }
                 }
             }
-            .background(Color.greenGray) // Set background color for the stack
+            
         }
-        
+        .background(.clear)
+        .navigationDestination(for: Venue.self) { venue in
+            // Define the destination view
+            VenueDetailedView(venue: venue)
+        }
     }
 }
+
+
 
 // Preview
 struct VenueListView_Previews: PreviewProvider {
