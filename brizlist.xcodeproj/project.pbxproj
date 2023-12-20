@@ -34,6 +34,7 @@
 		1FCCA08A2B30A47E00E8C461 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FCCA0812B30A47E00E8C461 /* Roboto-Regular.ttf */; };
 		1FCCA08C2B30A9DA00E8C461 /* AppNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCA08B2B30A9DA00E8C461 /* AppNameView.swift */; };
 		1FCCA0902B30FECB00E8C461 /* VenueFeaturedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCA08F2B30FECB00E8C461 /* VenueFeaturedCardView.swift */; };
+		1FCCA0922B32E41100E8C461 /* VenueDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCA0912B32E41100E8C461 /* VenueDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		1FCCA0812B30A47E00E8C461 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		1FCCA08B2B30A9DA00E8C461 /* AppNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNameView.swift; sourceTree = "<group>"; };
 		1FCCA08F2B30FECB00E8C461 /* VenueFeaturedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueFeaturedCardView.swift; sourceTree = "<group>"; };
+		1FCCA0912B32E41100E8C461 /* VenueDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				1FCCA08F2B30FECB00E8C461 /* VenueFeaturedCardView.swift */,
 				1F44F0B72B2DC0810030E67F /* MockData.swift */,
 				1F000BF72B2DED71003EE3D8 /* VenueFunctions.swift */,
+				1FCCA0912B32E41100E8C461 /* VenueDetailView.swift */,
 			);
 			path = brizlist;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				1F44F0B02B2CEF9D0030E67F /* Venue.swift in Sources */,
 				1FCCA08C2B30A9DA00E8C461 /* AppNameView.swift in Sources */,
 				1F44F0B22B2CEFD80030E67F /* VenueViewModel.swift in Sources */,
+				1FCCA0922B32E41100E8C461 /* VenueDetailView.swift in Sources */,
 				1F44F0B82B2DC0810030E67F /* MockData.swift in Sources */,
 				1F44F0992B2CE5950030E67F /* brizlistApp.swift in Sources */,
 			);

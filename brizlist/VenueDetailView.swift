@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct VenueDetailView: View {
+    var venue: Venue
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading, spacing: 10) {
+            Text(venue.name)
+                .font(.title)
+                .padding()
+            
+            Text(venue.shortDescription)
+                .font(.body)
+                .padding()
+            
+            Spacer()
+        }
+        .navigationBarTitle(venue.name, displayMode: .inline)
+        .padding()
     }
 }
 
-#Preview {
-    VenueDetailView()
-}

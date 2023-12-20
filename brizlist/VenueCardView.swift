@@ -18,6 +18,7 @@ struct VenueCardView: View {
                     Text(venue.name)
                         .font(.custom("UbuntuMono-Regular", size: 18))
                         .padding(.bottom, 5)
+                        .foregroundColor(.primary)
                     
                     if venue.newEntry {
                         Text("new")
@@ -33,7 +34,8 @@ struct VenueCardView: View {
                         .font(.custom("Roboto-Regular", size: 12))
                         .foregroundColor(Color.gray)
                         .italic()
-                        .padding(.bottom, 5)
+                        .lineLimit(nil) // Allow unlimited lines
+                        .multilineTextAlignment(.leading) // Align text to the leading edge
                     HStack {
                         HStack(spacing: 2) {
                             Image(systemName: "location.circle.fill")
@@ -62,12 +64,14 @@ struct VenueCardView: View {
                     Color.gray
                 }
                 .frame(width: 60, height: 60) // Adjust size as needed
+                .cornerRadius(10)
             }
         }
         .padding()
         .frame(maxWidth: .infinity)
         .background(Color.white)
         .padding(.horizontal, 20) // Additional padding to reduce card width
+        .padding(.vertical, 5)
     }
 }
 

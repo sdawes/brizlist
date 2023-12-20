@@ -89,7 +89,7 @@ struct VenueFeaturedCardView: View {
             RoundedRectangle(cornerRadius: 0)
                 .stroke(rainbowGradient, lineWidth: 2)
         )
-        .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
+        .padding(EdgeInsets(top: 20, leading: 20, bottom: 10, trailing: 20))
     }
 }
 
