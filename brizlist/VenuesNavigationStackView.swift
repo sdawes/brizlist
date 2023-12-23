@@ -14,12 +14,53 @@ struct VenuesNavigationStackView: View {
     var body: some View {
         NavigationStack(path: $navigationPath) {
             List(viewModel.venues) { venue in
-                NavigationLink(venue.name, value: venue)
-            }
-            .navigationDestination(for: Venue.self) { selectedVenue in
-                VenueDetailedView(venue: selectedVenue) // Navigate to VenueDetailView
-            }
-            .navigationBarTitle("Venues")
+                NavigationLink(destination: VenueDetailedView(venue: venue)) {
+                    VStack(alignment: .leading) {
+                        Text(venue.name)
+                            .font(.custom("UbuntuMono-Regular", size: 18))
+                            .padding(.bottom, 5)
+                            .foregroundColor(.primary)
+                        
+                        Text(venue.shortDescription)
+                            .font(.custom("Roboto-Regular", size: 12))
+                            .foregroundColor(Color.gray)
+                            .italic()
+                            .lineLimit(nil) // Allow unlimited lines
+                            .multilineTextAlignment(.leading) // Align text to the leading edge
+                        
+                        HStack {
+                            HStack(spacing: 2) {
+                                Image(systemName: "location.circle.fill")
+                                    .foregroundColor(.gray)
+                                    .imageScale(.small)
+                                Text(venue.location)
+                                    .font(.custom("Roboto-Regular", size: 12))
+                                    .foregroundColor(Color.gray)
+                            }
+                            HStack(spacing: 2) {
+                                Image(systemName: iconForVenueType(venue.type))
+                                    .foregroundColor(.gray)
+                                    .imageScale(.small)
+                                Text(venue.type)
+                                    .font(.custom("Roboto-Regular", size: 12))
+                                    .foregroundColor(Color.gray)
+                            }
+                        }
+                    }
+                    // Image icon
+                    AsyncImage(url: URL(string: venue.url)) { image in
+                        image.resizable()
+                    } placeholder: {
+                        Color.gray
+                    }
+                    .frame(width: 60, height: 60) // Adjust size as needed
+                    .cornerRadius(10)
+                }
+                .listRowSeparator(.hidden)
+                .padding(.bottom, 1) // Adjust spacing as needed
+                Divider()
+
+            }       
         }
         .onAppear {
             viewModel.fetchData() // Ensure data is fetched

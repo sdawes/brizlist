@@ -15,15 +15,6 @@ struct Venue: Identifiable, Hashable {
     var newEntry: Bool
     var featuredVenue: Bool
 
-    // Additional conformance to Hashable
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-
-    static func ==(lhs: Venue, rhs: Venue) -> Bool {
-        lhs.id == rhs.id
-    }
-
     init(id: String, name: String, type: String, url: String, location: String, shortDescription: String, newEntry: Bool, featuredVenue: Bool) {
         self.id = id
         self.name = name
