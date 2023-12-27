@@ -11,33 +11,41 @@ import FirebaseFirestore
 
 class VenueViewModel: ObservableObject {
     @Published var venues = [Venue]()
+    
     private var db = Firestore.firestore()
-
+    
     init() {
-        fetchData() // Fetch data when the model is initialized
+        fetchData()
     }
-
-    func fetchData() {
-        db.collection("venues").addSnapshotListener { querySnapshot, error in
+    
+    private func fetchData() {
+        db.collection("venues").addSnapshotListener { [weak self] querySnapshot, error in
             guard let documents = querySnapshot?.documents else {
-                print("No documents: \(error?.localizedDescription ?? "Unknown error")")
+                print("Error fetching documents: \(error?.localizedDescription ?? "Unknown error")")
                 return
             }
-
-            self.venues = documents.map { document in
+            
+            self?.venues = documents.map { document in
                 let data = document.data()
-                let name = data["name"] as? String ?? ""
-                let type = data["type"] as? String ?? ""
-                let url = data["url"] as? String ?? ""
-                let location = data["location"] as? String ?? ""
-                let shortDescription = data["shortDescription"] as? String ?? ""
-                let newEntry = data["newEntry"] as? Bool ?? false
-                let featuredVenue = data["featuredVenue"] as? Bool ?? false
-                return Venue(id: document.documentID, name: name, type: type, url: url, location: location, shortDescription: shortDescription, newEntry: newEntry, featuredVenue: featuredVenue)
+                return Venue(
+                    id: document.documentID,
+                    name: data["name"] as? String ?? "",
+                    type: data["type"] as? String ?? "",
+                    url: data["url"] as? String ?? "",
+                    location: data["location"] as? String ?? "",
+                    shortDescription: data["shortDescription"] as? String ?? "",
+                    newEntry: data["newEntry"] as? Bool ?? false,
+                    featuredVenue: data["featuredVenue"] as? Bool ?? false
+                )
             }
         }
     }
+    
 }
+
+
+
+
 
 
 
