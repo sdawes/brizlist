@@ -12,18 +12,18 @@ struct Venue: Identifiable, Hashable {
     var url: String
     var location: String
     var shortDescription: String
-    var newEntry: Bool
-    var featuredVenue: Bool
+    var isNew: Bool
+    var isFeatured: Bool
 
-    init(id: String, name: String, type: String, url: String, location: String, shortDescription: String, newEntry: Bool, featuredVenue: Bool) {
+    init(id: String, name: String, type: String, url: String, location: String, shortDescription: String, isNew: Bool, isFeatured: Bool) {
         self.id = id
         self.name = name
         self.type = type
         self.url = url
         self.location = location
         self.shortDescription = shortDescription
-        self.newEntry = newEntry
-        self.featuredVenue = featuredVenue
+        self.isNew = isNew
+        self.isFeatured = isFeatured
     }
 }
 

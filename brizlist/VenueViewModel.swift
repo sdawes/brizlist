@@ -34,8 +34,8 @@ class VenueViewModel: ObservableObject {
                     url: data["url"] as? String ?? "",
                     location: data["location"] as? String ?? "",
                     shortDescription: data["shortDescription"] as? String ?? "",
-                    newEntry: data["newEntry"] as? Bool ?? false,
-                    featuredVenue: data["featuredVenue"] as? Bool ?? false
+                    isNew: data["isNew"] as? Bool ?? false,
+                    isFeatured: data["isFeatured"] as? Bool ?? false
                 )
             }
         }

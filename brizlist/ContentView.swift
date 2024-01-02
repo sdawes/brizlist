@@ -18,45 +18,50 @@ struct ContentView: View {
                 List {
                     
                     Section("Featured") {
-                        ForEach(venueViewModel.venues.filter { $0.newEntry == true }, id: \.self) { venue in
-                            ZStack {
-                                VStack {
-                                    AsyncImage(url: URL(string: venue.url)) { image in
-                                        image.resizable()
-                                    } placeholder: {
-                                        Color.gray.opacity(0.3)
-                                    }
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(maxWidth: .infinity)
-                                    .clipped()
-
-                                    VStack(alignment: .leading, spacing: 5) {
-                                        Text(venue.name)
-                                            .font(.headline)
-                                            .fontWeight(.bold)
-                                        Text(venue.shortDescription)
-                                            .font(.subheadline)
-                                        HStack {
-                                            Text(venue.type)
-                                                .font(.caption)
-                                            Text(venue.location)
-                                                .font(.caption)
-                                        }
-                                    }
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .padding()
+                        ForEach(venueViewModel.venues.filter { $0.isNew == true }, id: \.self) { venue in
+                            ZStack(alignment: .bottom) {
+                                AsyncImage(url: URL(string: venue.url)) { image in
+                                    image.resizable()
+                                } placeholder: {
+                                    Color.blGrey
                                 }
-                                .background(Color.blGrey) // Background color for the VStack content
+                                .aspectRatio(contentMode: .fill)
+                                .frame(maxWidth: .infinity)
+                                .clipped()
                                 .overlay(
-                                            RoundedRectangle(cornerRadius: 10)
-//                                                .stroke(Color.blPink, lineWidth: 10)
-                                                .stroke(
-                                                            LinearGradient(gradient: Gradient(colors: [.red, .orange, .yellow, .green, .blue, .indigo, .purple]), startPoint: .leading, endPoint: .trailing),
-                                                            lineWidth: 6
-                                                        )
-                                        )
-                                .cornerRadius(10) // Apply corner radius to VStack content
+                                    LinearGradient(gradient: Gradient(stops: [
+                                        .init(color: Color.white.opacity(1), location: 0.1),
+                                        .init(color: Color.white.opacity(1), location: 0.2),
+                                        .init(color: Color.white.opacity(0), location: 1)
+                                    ]), startPoint: .bottom, endPoint: .top)
+                                )
+
+
+
+
+                                VStack(alignment: .leading, spacing: 5) {
+                                    Text(venue.name)
+                                        .font(.headline)
+                                        .fontWeight(.bold)
+                                    Text(venue.shortDescription)
+                                        .font(.subheadline)
+                                    HStack {
+                                        Text(venue.type)
+                                            .font(.caption)
+                                        Text(venue.location)
+                                            .font(.caption)
+                                    }
+                                }
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding()
+//                                .background(Color.blue) // Background color for the text VStack
                             }
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10) // This will be your corner radius
+                                    .stroke(Color.gray, lineWidth: 1) // Set the stroke as gray and adjust lineWidth as needed
+                            )
+                            
+                            .cornerRadius(10) // Apply corner radius to VStack content
                             .padding([.horizontal, .top])
                             .listRowInsets(EdgeInsets())
                             .overlay(
@@ -70,6 +75,8 @@ struct ContentView: View {
                         }
                         .listRowSeparator(.hidden)
                     }
+
+
 
 
 
@@ -246,6 +253,7 @@ struct DetailView: View {
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
