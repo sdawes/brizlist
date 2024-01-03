@@ -25,7 +25,7 @@ struct AppNameView: View {
 
         }
         .frame(maxWidth: .infinity, alignment: .leading) // Align text to the left
-        .background(Color.darkRed)
+        .background(Color.blRed)
     }
 }
 
