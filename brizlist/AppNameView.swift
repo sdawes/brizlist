@@ -17,7 +17,7 @@ struct AppNameView: View {
                 .padding(.leading, 25) // Adjust this value as needed
 
             Text("brizlist")
-                .font(.custom("UbuntuMono-Bold", size: 22))
+                .font(.custom("CourierPrime-Bold", size: 22))
                 // Apply padding only to the top, bottom, and trailing edges
                 .padding([.top, .bottom, .trailing])
                 .foregroundColor(.white)
@@ -25,7 +25,7 @@ struct AppNameView: View {
 
         }
         .frame(maxWidth: .infinity, alignment: .leading) // Align text to the left
-        .background(Color.blRed)
+        .background(Color.black)
     }
 }
 

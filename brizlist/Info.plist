@@ -4,10 +4,9 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>UbuntuMono-Regular.ttf</string>
-		<string>UbuntuMono-Bold.ttf</string>
-		<string>Roboto-Regular.ttf</string>
-		<string>Roboto-light.ttf</string>
+		<string>CourierPrime-Bold.ttf</string>
+		<string>CourierPrime-Regular.ttf</string>
+		<string>CourierPrime-Italic.ttf</string>
 	</array>
 </dict>
 </plist>
